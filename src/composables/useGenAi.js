@@ -1,4 +1,8 @@
-import { GoogleGenerativeAI } from '@google/generative-ai'
+import {
+  GoogleGenerativeAI,
+  HarmCategory,
+  HarmBlockThreshold
+} from '@google/generative-ai'
 
 export const useGenAi = async (modelType) => {
   const VITE_GOOGLE_AI_STUDIO_API_KEY = import.meta.env.VITE_GOOGLE_AI_STUDIO_API_KEY
@@ -8,3 +12,6 @@ export const useGenAi = async (modelType) => {
 
   return model
 }
+
+export const harmCategory = HarmCategory
+export const harmBlockThreshold = HarmBlockThreshold
